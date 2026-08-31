@@ -303,10 +303,16 @@
 
   /* --- Scroll reveal --- */
   function initReveal() {
-    const sections = $$(".section, .hero");
-    if (!sections.length || !("IntersectionObserver" in window)) return;
+    const sections = $$(".section");
+    if (!sections.length) return;
 
-    sections.forEach((s) => (s.style.opacity = "0"));
+    // If IntersectionObserver is not available, keep everything visible
+    if (!("IntersectionObserver" in window)) return;
+
+    sections.forEach((s) => {
+      s.style.opacity = "0";
+      s.style.transform = "translateY(24px)";
+    });
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -319,12 +325,20 @@
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.05 }
     );
 
-    sections.forEach((s) => {
-      s.style.transform = "translateY(24px)";
-      observer.observe(s);
-    });
+    sections.forEach((s) => observer.observe(s));
+
+    // Safety net: if observer hasn't revealed everything after 3s, show it all
+    setTimeout(() => {
+      sections.forEach((s) => {
+        if (s.style.opacity === "0") {
+          s.style.transition = "opacity 0.4s ease";
+          s.style.opacity = "1";
+          s.style.transform = "translateY(0)";
+        }
+      });
+    }, 3000);
   }
 })();
