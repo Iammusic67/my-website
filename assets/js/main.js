@@ -303,42 +303,43 @@
 
   /* --- Scroll reveal --- */
   function initReveal() {
-    const sections = $$(".section");
+    var sections = $$(".section");
     if (!sections.length) return;
 
     // If IntersectionObserver is not available, keep everything visible
-    if (!("IntersectionObserver" in window)) return;
+    if (!("IntersectionObserver" in window)) {
+      sections.forEach(function(s) { s.style.opacity = '1'; });
+      return;
+    }
 
-    sections.forEach((s) => {
-      s.style.opacity = "0";
-      s.style.transform = "translateY(24px)";
+    sections.forEach(function(s) {
+      s.style.opacity = '0';
+      s.style.transform = 'translateY(24px)';
     });
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+    var observer = new IntersectionObserver(
+      function(entries) {
+        entries.forEach(function(entry) {
           if (entry.isIntersecting) {
-            entry.target.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
+            entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.05 }
+      { threshold: 0.02 }
     );
 
-    sections.forEach((s) => observer.observe(s));
+    sections.forEach(function(s) { observer.observe(s); });
 
-    // Safety net: if observer hasn't revealed everything after 3s, show it all
-    setTimeout(() => {
-      sections.forEach((s) => {
-        if (s.style.opacity === "0") {
-          s.style.transition = "opacity 0.4s ease";
-          s.style.opacity = "1";
-          s.style.transform = "translateY(0)";
-        }
+    // Safety net: reveal everything after 2s regardless
+    setTimeout(function() {
+      sections.forEach(function(s) {
+        s.style.transition = 'opacity 0.4s ease';
+        s.style.opacity = '1';
+        s.style.transform = 'translateY(0)';
       });
-    }, 3000);
+    }, 2000);
   }
 })();

@@ -5,7 +5,7 @@
    Everything on the site is driven by this file.
    ============================================================ */
 
-const SITE_CONTENT = {
+var SITE_CONTENT = {
 
   // ---------- IDENTITY ----------
   name: "Chris Kariuki Mungai",
