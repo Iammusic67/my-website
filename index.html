@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chris Kariuki Mungai — Aspiring Computer Scientist</title>
+<meta name="description" content="Chris Kariuki Mungai — self-taught developer building technology for education and financial inclusion in Africa." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Chris Kariuki Mungai — Aspiring Computer Scientist" />
+<meta property="og:description" content="Self-taught developer building technology that expands access to education and financial inclusion across Africa." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://iammusic67.github.io/my-website" />
+<meta property="og:image" content="https://iammusic67.github.io/my-website/assets/og-image.png" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Chris Kariuki Mungai — Aspiring Computer Scientist" />
+<meta name="twitter:description" content="Self-taught developer building technology for education and financial inclusion in Africa." />
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>&#x1F4BB;</text></svg>" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Chris Kariuki Mungai",
+  "url": "https://iammusic67.github.io/my-website",
+  "jobTitle": "Aspiring Computer Scientist",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "sameAs": [
+    "https://github.com/Iammusic67"
+  ],
+  "knowsAbout": ["Python", "JavaScript", "Node.js", "Generative AI", "Education Technology"]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">CKM<span class="brand-dot">.</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow" id="hero-eyebrow"></p>
+        <h1 id="hero-headline"></h1>
+        <p class="hero-sub" id="hero-subtext"></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" id="hero-cta-primary" href="#work"></a>
+          <a class="btn btn-ghost" id="hero-cta-secondary" href="#contact"></a>
+        </div>
+      </div>
+      <div class="hero-graphic" aria-hidden="true">
+        <svg id="ascent-svg" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-mark" aria-hidden="true">
+        <div class="avatar-initials" id="avatar-initials"></div>
+      </div>
+      <div class="about-copy">
+        <p class="section-label">01 — About</p>
+        <h2 id="about-heading"></h2>
+        <div id="about-paragraphs" class="about-text"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOURNEY / TIMELINE ============ -->
+  <section class="section journey" id="journey">
+    <div class="wrap">
+      <p class="section-label">02 — Journey</p>
+      <h2>The path so far</h2>
+      <ol class="timeline" id="timeline-list"></ol>
+    </div>
+  </section>
+
+  <!-- ============ WORK / PROJECTS ============ -->
+  <section class="section work" id="work">
+    <div class="wrap">
+      <p class="section-label">03 — Work</p>
+      <h2>Projects</h2>
+      <div class="project-grid" id="project-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS + CERTIFICATES ============ -->
+  <section class="section skills" id="skills">
+    <div class="wrap">
+      <p class="section-label">04 — Skills</p>
+      <h2 id="skills-heading"></h2>
+      <div class="tag-list" id="skills-tags"></div>
+
+      <h3 class="cert-subheading">Certificates &amp; proof of skill</h3>
+      <div class="cert-grid" id="cert-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="section-label">05 — Contact</p>
+        <h2 id="contact-heading"></h2>
+        <p id="contact-subtext"></p>
+      </div>
+      <div class="contact-links" id="contact-links"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span id="footer-note"></span>
+    <span id="footer-year"></span>
+  </div>
+</footer>
+
+<script src="assets/js/content.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
