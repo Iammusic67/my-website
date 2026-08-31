@@ -221,6 +221,41 @@ a{ color: inherit; text-decoration: none; }
 }
 
 /* ============================================================
+   EDUCATION
+   ============================================================ */
+.edu-card{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+  margin-bottom: 20px;
+}
+.edu-card h3{ margin: 0 0 6px; color: var(--gold); }
+.edu-meta{
+  font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--muted-2); margin-bottom: 8px;
+}
+.edu-qual{
+  font-size: 0.95rem; color: var(--muted); margin-bottom: 14px;
+}
+.edu-details{
+  list-style: none; margin: 0; padding: 0;
+}
+.edu-details li{
+  position: relative; padding-left: 18px; margin-bottom: 6px;
+  font-size: 0.92rem; color: var(--muted);
+}
+.edu-details li::before{
+  content: "\2022"; position: absolute; left: 0; color: var(--teal);
+}
+.edu-aspiration{
+  margin-top: 20px; padding: 16px 20px;
+  background: var(--teal-soft); border-radius: var(--radius);
+  font-family: var(--font-mono); font-size: 0.9rem;
+  color: var(--teal); display: inline-block;
+}
+
+/* ============================================================
    JOURNEY / TIMELINE
    ============================================================ */
 .timeline{
@@ -318,6 +353,13 @@ a{ color: inherit; text-decoration: none; }
 .cert-placeholder{
   font-size: 0.82rem; color: var(--muted-2); font-style: italic;
 }
+.cert-screenshot{
+  width: 100%; max-width: 360px; height: auto;
+  border-radius: 8px; margin: 12px 0;
+  border: 1px solid var(--line);
+  transition: transform 0.2s ease;
+}
+.cert-screenshot:hover{ transform: scale(1.02); }
 
 /* ============================================================
    CONTACT

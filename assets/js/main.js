@@ -51,6 +51,29 @@
     avatar.textContent = initials;
   }
 
+  // Education
+  setText("#education-heading", C.education.heading);
+  const eduEntries = $("#education-entries");
+  if (eduEntries && C.education) {
+    eduEntries.innerHTML = "";
+    C.education.entries.forEach((entry) => {
+      const card = el("div", { class: "edu-card" }, [
+        el("h3", null, entry.institution),
+        el("div", { class: "edu-meta" }, `${entry.location} · ${entry.period}`),
+        el("div", { class: "edu-qual" }, entry.qualification),
+      ]);
+      if (entry.details && entry.details.length) {
+        const ul = el("ul", { class: "edu-details" }, null);
+        entry.details.forEach((d) => ul.appendChild(el("li", null, d)));
+        card.appendChild(ul);
+      }
+      eduEntries.appendChild(card);
+    });
+    if (C.education.aspiration) {
+      setText("#education-aspiration", C.education.aspiration);
+    }
+  }
+
   // Timeline
   const timeline = $("#timeline-list");
   if (timeline) {
@@ -82,6 +105,12 @@
         el("h4", null, cert.title),
         el("div", { class: "cert-meta" }, `${cert.issuer} · ${cert.date}`),
       ]);
+      if (cert.screenshot) {
+        const img = el("a", { href: cert.file || "#", target: "_blank", rel: "noopener" }, [
+          el("img", { class: "cert-screenshot", src: cert.screenshot, alt: `${cert.title} certificate`, loading: "lazy" }),
+        ]);
+        card.appendChild(img);
+      }
       if (cert.file) {
         card.appendChild(
           el(
@@ -90,7 +119,7 @@
             "View certificate ↗"
           )
         );
-      } else {
+      } else if (!cert.screenshot) {
         card.appendChild(el("span", { class: "cert-placeholder" }, "Certificate pending upload"));
       }
       certGrid.appendChild(card);

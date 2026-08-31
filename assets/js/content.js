@@ -36,6 +36,11 @@ const SITE_CONTENT = {
         "I didn't learn to code through a bootcamp or a university course — I taught myself, one problem at a time, " +
         "because the formal education I had access to wasn't preparing me for the world I wanted to build in.",
 
+      "I graduated from Nyandarua High School in November 2025 with an overall grade of A- (80 points), " +
+        "ranking in the top 0.2% out of 996,563 students who sat for the Kenya Certificate of Secondary Education " +
+        "national examination. That result proved something I'd always believed: that determination and self-direction " +
+        "matter more than privilege. Now I'm channelling that same discipline into Computer Science.",
+
       "A pivotal moment came during a six-month attachment at Equity Bank, one of East Africa's largest financial institutions. " +
         "I saw firsthand how financial systems work — and how millions of people are still excluded from them. " +
         "I watched bank employees explain basic concepts to customers who had never had a bank account. " +
@@ -51,6 +56,25 @@ const SITE_CONTENT = {
         "hands-on experience I've already built, will let me move from building prototypes to building systems " +
         "that actually scale.",
     ],
+  },
+
+  // ---------- EDUCATION ----------
+  education: {
+    heading: "Education",
+    entries: [
+      {
+        institution: "Nyandarua High School",
+        location: "Nyandarua County, Kenya",
+        period: "Graduated November 2025",
+        qualification: "Kenya Certificate of Secondary Education (KCSE)",
+        details: [
+          "Overall grade: A- (80 points)",
+          "Ranked in the top 0.2% out of 996,563 candidates nationally",
+          "Demonstrated consistent academic excellence and self-directed discipline",
+        ],
+      },
+    ],
+    aspiration: "Aspiring to pursue a degree in Computer Science",
   },
 
   // ---------- JOURNEY / TIMELINE ----------
@@ -119,26 +143,30 @@ const SITE_CONTENT = {
     {
       title: "Scientific Computing with Python",
       issuer: "freeCodeCamp",
-      date: "August 2026",
-      file: "", // Upload PDF to assets/certificates/
+      date: "August 6, 2026",
+      file: "https://www.freecodecamp.org/certification/fcc-44dc3f3a-688c-4478-ba74-dbf5f87de032/python-v9",
+      screenshot: "assets/certificates/freecodecamp-python.png",
     },
     {
       title: "JavaScript Algorithms and Data Structures",
       issuer: "freeCodeCamp",
       date: "August 2026",
       file: "",
+      screenshot: "",
     },
     {
       title: "Generative AI with Large Language Models",
       issuer: "Coursera (DeepLearning.AI)",
       date: "2026",
       file: "",
+      screenshot: "",
     },
     {
       title: "Prompt Engineering for Developers",
       issuer: "Coursera (DeepLearning.AI)",
       date: "2026",
       file: "",
+      screenshot: "",
     },
   ],
 
@@ -154,7 +182,7 @@ const SITE_CONTENT = {
         "Currently in active use with teacher and student accounts.",
       tags: ["Node.js", "Express", "SQLite", "Anthropic AI", "Full-Stack", "Education"],
       repoUrl: "https://github.com/Iammusic67/stemlift-africa",
-      demoUrl: "",
+      demoUrl: "https://stemlift-africa.onrender.com",
     },
     {
       name: "AI Quiz Engine",
@@ -187,8 +215,8 @@ const SITE_CONTENT = {
       "computer science, or opportunities to learn and build together.",
     email: "ckaris003@gmail.com",
     github: "https://github.com/Iammusic67",
-    linkedin: "", // Add when ready
-    phone: "",   // Add if desired
+    linkedin: "",
+    phone: "+254716476119",
   },
 
   // ---------- FOOTER ----------
